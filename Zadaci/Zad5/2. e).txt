@@ -1,0 +1,3 @@
+use Zadatak5
+go
+select u.firstname as Ime, u.lastname as Prezime, o.id as idPorudzbine, count(oi.id) as brojStavki from users u join orders o on u.id=o.userid join orderitem oi on o.id=oi.orderid group by u.firstname, u.lastname, o.id having count(oi.id)>=2 order by o.id

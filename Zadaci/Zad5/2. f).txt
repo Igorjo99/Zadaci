@@ -1,0 +1,3 @@
+use Zadatak5
+go
+select  u.firstname as Ime, u.lastname as Prezime,count(distinct oi.productId) brojProizvoda from users u join orders o on u.id=o.userid join orderitem oi on o.id=oi.orderid group by u.firstname, u.lastname having count(distinct oi.productId)>=3

@@ -1,0 +1,3 @@
+use Zadatak5
+go
+select u.firstname as Ime, u.lastname as Prezime,count(o.id) as brojPorudzbina from Users u join Orders o on u.id=o.userId group by u.id,u.firstname,u.lastname having count(o.id)>=2

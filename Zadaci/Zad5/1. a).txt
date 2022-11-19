@@ -1,0 +1,3 @@
+use Zadatak5
+go
+select* from Users where dateCreate between getdate()-2 and getdate()
